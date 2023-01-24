@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lora:wght@500&family=Titillium+Web:wght@600&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 60px;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(19, 64%, 54%);
+  --first-color-alt: hsl(19, 64%, 52%);
+  --title-color: hsl(19, 16%, 15%);
+  --text-color: hsl(19, 16%, 35%);
+  --text-color-light: hsl(19, 8%, 55%);
+  --body-color: hsl(20, 26%, 89%);
+  --container-color: hsl(19, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Lora', serif;; 
+  --title-font: 'Kaushan Script', cursive;
+  --subtitle-font: 'Titillium Web', sans-serif;
+  --biggest-font-size: 36px;
+  --h1-font-size: 24px;
+  --h2-font-size: 20px;
+  --h3-font-size: 20px;
+  --normal-font-size: 15px;
+  --small-font-size: 13px;
+  --smaller-font-size: 12px;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 64px;
+    --h1-font-size: 36px;
+    --h2-font-size: 24px;
+    --h3-font-size: 20px;
+    --normal-font-size: 18px;
+    --small-font-size: 14px;
+    --smaller-font-size: 13px;
+  }
+}
+
+/*=============== BASE ===============*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1024px;
+  margin-inline: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  padding-block: 80px 16px;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  font-family: var(--title-font);
+  margin-bottom: 24px;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--h2-font-size);
+  font-family: var(--subtitle-font);
+  color: var(--first-color);
+  margin-bottom: 8px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+a {
+  text-decoration: none;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  background-color: var(--body-color);
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s, background 0.4s;
+}
+
+nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo {
+  align-items: center;
+  column-gap: 4px;
+  font-family: var(--title-font);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  transition: color .3s;
+}
+
+.nav_logo,
+.nav_toggle {
+  display: flex;
+  color: var(--title-color);
+}
+
+.nav_logo {
+  align-items: center;
+  column-gap: 8px;
+  font-family: var(--title-font);
+}
+
+.nav_logo img {
+  width: 55px;
+}
+
+.nav_logo:hover {
+  color: var(--first-color);
+}
+
+
+.nav_link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.nav_link:hover {
+  color: var(--first-color);
+}
+
+.nav_toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+
+.nav_logo:hover {
+  color: var(--first-color);
+}
+
+
+.nav_list {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  top: 18px;
+  right: 54px;
+  gap: 40px;
+  list-style: none;
+  font-size: 20px;
+}
+
+/* Home */
+
+.home{
+  position: relative;
+  
+}
+
+.home_container{
+row-gap: 48px;
+padding-top: 32px;
+height: 700px;
+}
+
+.home_img{
+  width: 300px;
+  justify-self: center;
+}
+
+.home_data{
+  text-align: center;
+  padding-top: 90px;
+}
+
+
+.home_tittle{
+  font-size: var(--biggest-font-size);
+  font-family: var(--title-font);
+  margin-bottom: 16px;
+}
+ .home_tittle img{
+  width: 40px;
+ }
+
+ .home_tittle div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+ }
+
+ .home_desc{
+  padding: 0 16px;
+  margin-bottom: 20px;
+ }
+
+ .button{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+  background-color: var(--first-color);
+  padding: 16px 20px;
+  border-radius: 64px;
+  color: white;
+  font-weight: var(--font-medium);
+  transition: background .3s;
+ }
+
+ .button i{
+  font-size: 20px;
+  transition: transform .3s;
+ }
+
+ .button:hover{
+  background-color: var(--first-color-alt);
+ }
+
+ .button:hover i{
+  transform: translateY(4px);
+ }
+
+/* - Recipe _ */
+
+.recipe_section{
+  background-color:var(--container-color);
+  height: 1000px;
+}
+.ingridients{
+box-sizing: border-box;
+position: absolute;
+width: 658px;
+height: auto;
+border: 2px solid #000000;
+margin-top: 90px;
+}
+
+
+.specs{
+box-sizing: border-box;
+position: absolute;
+width: 150px;
+top: -15px;
+background: #FFFFFF;
+border: 2px solid #000000;
+}
+
+.ingr{
+  display: block;
+  float: left;
+  align-content: center;
+  padding-top: 50px;
+}
+.ingr span{
+  float: right;
+  font-size: .8rem;
+  padding-top: 6px;
+}
+
+
+ @media screen and (min-width: 576px){
+  .home_container{
+    grid-template-columns: .7fr;
+    justify-content: center;
+    height: 100%;
+  }
+ }
+
+ .home_img{
+  margin-top: -60px;
+  display: inline;
+  width: 100%;
+  
+}
+
+.home_tittle{
+  margin-top: -70px;
+  font-size: 50px;
+}
+
+.home_data img{
+  width: 80px;
+}
+ @media screen and (min-width: 767px){
+  nav{
+    column-gap: 3rem;
+
+  }
+.home_container{
+  height: 100%;
+ }
+  .home_img{
+    display: inline;
+    width: 100%;
+    
+  }
+ }
+
+ @media screen and (min-width: 1024px){
+
+  nav{
+    margin: 20px;
+
+  }
+
+  .home_container{
+    position: relative;
+    grid-template-columns: 480pc 500px;
+    padding-block: 5rem 3rem; 
+    height: 690px;
+    
+  }
+
+  .home_data{
+    text-align: initial;
+    order: -1;
+    padding-left: 100px;
+    margin-top: 60px;
+  }
+
+  .home_data img{
+    width: 100px;
+    margin-left: 20px;
+  }
+
+  .home_tittle div{
+    justify-content: initial;
+    column-gap: 1rem;
+    font-size: 55px;
+  }
+
+  .home_desc{
+    padding-inline: 0 10rem;
+    text-align: center;
+    margin-left: -700px;
+    padding-top: 20px;
+  }
+
+  .home_img{
+    width: 700px;
+    position: absolute;
+    top: 11rem;
+    right: 2rem;
+  }
+
+  .button{
+    margin-left: 250px;
+    padding-inline: 30px;
+    margin-top: 30px;
+  }
+ }
