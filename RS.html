@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== CSS ===============-->
-    <link href="CSS/style.css" rel="stylesheet">
+    <link href="assets/CSS/style.css" rel="stylesheet">
     <title>ReceptS</title>
 </head>
 
@@ -19,11 +19,11 @@
     <header class="header" id="header">
         <nav class="nav_container">
             <a href="#header" class="nav_logo">
-                <img src="/imagesNeeded/icon.png" alt="logo_image">
+                <img src="assets/imagesNeeded/icon.png" alt="logo_image">
                 Katsu Chicken
             </a>
 
-            <div class="nav_menu" id="nav_menu">
+            <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list">
                     <li class="nav_item">
                         <a href="#home" class="nav_link">Home</a>
@@ -36,12 +36,11 @@
                     </li>
                 </ul>
 
-                <div class="nav_buttons">
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
                     <div class="nav_toggle" id="nav-toggle">
                         <i class="ri-menu-3-line"></i>
-
-                    </div>
-
                 </div>
             </div>
         </nav>
@@ -53,12 +52,12 @@
         <!--==================== HOME ====================-->
         <section class="home_section" id="home">
             <div class="home_container">
-                <img src="/imagesNeeded/Untitled-design-4.png" alt="KatsuMain" class="home_img">
+                <img src="assets/imagesNeeded/Untitled-design-4.png" alt="KatsuMain" class="home_img">
                 <div class="home_data">
                     <h1 class="home_tittle">
                         Japanese Katsu
                         <div>
-                            <img src="/imagesNeeded/icon.png" alt="home icon">
+                            <img src="assets/imagesNeeded/icon.png" alt="home icon">
                             Chicken
                         </div>
                     </h1>
@@ -68,7 +67,7 @@
                         <br>I'm referring to this Chicken Katsu (チキンカツ),
                         <br>a Japanese variant of chicken schnitzel or chicken tenders.
                     </p>
-                    <a href="#recipe" class="button">
+                    <a href="#" class="button">
                         Recipe <i class="ri-arrow-down-s-line"></i>
                     </a>
                 </div>
@@ -79,7 +78,7 @@
         <!--==================== RECIPE ====================-->
         <section class="recipe_section" id="recipe">
             <div class="ingr_img">
-                <img src="/imagesNeeded/ingre.png" alt="ingridients">
+                <img src="assets/imagesNeeded/ingre.png" alt="ingridients">
             </div>
 
             <div class="ingridients">
@@ -150,24 +149,24 @@
                 </ul>
             </div>
             <div class="direct_imgs">
-                <img src="/imagesNeeded/Salted-Chicken-Breasts-300x200.jpg" alt="step1">
+                <img src="assets/imagesNeeded/Salted-Chicken-Breasts-300x200.jpg" alt="step1">
 
-                <img src="/imagesNeeded/Panko-Breaded-Chicken-Breasts-300x200.jpg" alt="step2">
-                <img src="/imagesNeeded/chicken-katsu-4.jpeg" alt="step3">
+                <img src="assets/imagesNeeded/Panko-Breaded-Chicken-Breasts-300x200.jpg" alt="step2">
+                <img src="assets/imagesNeeded/chicken-katsu-4.jpeg" alt="step3">
             </div>
             <div class="nf-start">
-                <p>Nutrition</p> <img src="/imagesNeeded/left-arrow-3588.png" alt="down">
+                <p>Nutrition</p> <img src="assets/imagesNeeded/left-arrow-3588.png" alt="down">
             </div>
         </section>
 
         <!--==================== NF ====================-->
         <section class="NF_section" id="NF">
             <div class="nutrition">
-                <img src="/imagesNeeded/NutritionLabel.png" alt="katsu_nutri">
+                <img src="assets/imagesNeeded/NutritionLabel.png" alt="katsu_nutri">
             </div>
             <ul class="katsu_box">
                 <div class="katsu_img" id="imgk">
-                    <img src="/imagesNeeded/Katsu-Chicken-1.jpg" alt="">
+                    <img src="assets/imagesNeeded/Katsu-Chicken-1.jpg" alt="">
                 </div>
 
                 <h2 class="katsu_tittle">Japanese Katsu Chicken</h2>
@@ -196,11 +195,7 @@
 
         </section>
     </main>
-    <!--========== SCROLL UP ==========-->
-
-
-    <!--=============== SCROLLREVEAL ===============-->
-
+    <script src="main.js"></script>
 </body>
 
 </html>
