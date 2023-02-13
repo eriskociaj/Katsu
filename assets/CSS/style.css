@@ -62,10 +62,12 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background 0.4s; 
+  transition: background 0.4s;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -83,6 +85,19 @@ img {
   height: auto;
 }
 
+.container {
+  max-width: 1024px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
 
 .header {
   position: fixed;
@@ -95,7 +110,7 @@ img {
   transition: box-shadow 0.3s, background 0.4s;
 }
 
-.nav {
+nav {
   position: relative;
   height: var(--header-height);
   display: flex;
@@ -104,22 +119,21 @@ img {
 }
 
 .nav_logo {
+
   align-items: center;
   column-gap: 0.5rem;
   font-family: var(--title-font);
   font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
   transition: color 0.3s;
-  
 }
-  .nav_logo,
+
+.nav_logo,
 .nav_toggle,
 .nav_close {
   display: flex;
   color: var(--title-color);
 }
-
-
 
 .nav_logo img {
   width: 25px;
@@ -140,16 +154,18 @@ img {
 }
 
 .nav_toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
   font-size: 1.25rem;
   cursor: pointer;
 }
 
-
-@media screen and (max-width: 767px){
-
-  .nav_menu{
+@media screen and (max-width: 767px) {
+  .nav_menu {
     position: fixed;
-    top: 0;
+    top: -100%;
     right: 0;
     background-color: var(--body-color);
     width: 100%;
@@ -158,95 +174,95 @@ img {
     transition: top 0.4s;
   }
 }
-  .nav_list{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    row-gap: 2rem;
-  }
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 2rem;
+}
 
-  .nav_link{
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    transition: color 0.4s;
-  }
+.nav_link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
 
-  .nav_link:hover{
-    color: var(--first-color);
-  }
+.nav_link:hover {
+  color: var(--first-color);
+}
 
-  .nav_close{
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
+.nav_close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-  /* Visa menu */
+/* Visa menu */
 
-  .show-menu{
-    top: 0;
-  }
-
+.show-menu {
+  top: 0;
+}
 
 /* Home */
 
-
-.home {
+#home {
   position: relative;
 }
 
 .home_container {
+  margin-top: 40px;
   row-gap: 3rem;
   padding-top: 2rem;
+  height: 690px;
 }
 
 .home_img {
   width: 300px;
   justify-self: center;
+  margin-left: 45px;
 }
 
 .home_data {
   text-align: center;
-  
 }
 
 .home_tittle {
   font-size: var(--biggest-font-size);
   font-family: var(--title-font);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 .home_tittle img {
-  width: 40px;
+  width: 60px;
 }
 
 .home_tittle div {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 8px;
+  column-gap: 0.5rem;
 }
 
 .home_desc {
-  padding: 0 16px;
-  margin-bottom: 20px;
+  padding: 0 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
-  column-gap: 8px;
+  column-gap: 0.5rem;
   background-color: var(--first-color);
-  padding: 16px 20px;
-  border-radius: 64px;
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
   color: white;
   font-weight: var(--font-medium);
   transition: background 0.3s;
 }
 
 .button i {
-  font-size: 20px;
+  font-size: 1.5rem;
   transition: transform 0.3s;
 }
 
@@ -255,37 +271,32 @@ img {
 }
 
 .button:hover i {
-  transform: translateY(4px);
+  transform: translateY(0.25rem);
 }
 
 /* - Recipe - */
-/*
-.ingr_img {
-  width: 600px;
-  margin-left: 120px;
-  margin-top: 120px;
-  border: 3px solid #000000;
-  height: 401.25px;
-}
-.recipe_section {
+
+.recipe {
+  position: relative;
   background-color: var(--container-color);
-  height: 1800px;
-  display: flex;
+}
+
+.ingr_container {
+  row-gap: 3rem;
+  margin-top: -70px;
 }
 .ingridients {
   box-sizing: border-box;
-  position: absolute;
-  width: 558px;
+  position: relative;
+  width: 100%;
   height: 430px;
   border: 3px solid #000000;
-  margin-top: 70px;
-  right: 0;
-  margin-right: 90px;
+  margin-top: 20px;
 }
 
 .specs {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   width: 250px;
   padding: 10px;
   margin-left: 20px;
@@ -302,7 +313,9 @@ img {
 
 .ingr li {
   list-style-type: none;
-  padding-top: 30px;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 22px;
   font-family: var(--subtitle-font);
 }
 label {
@@ -316,6 +329,9 @@ input:checked ~ span {
   color: #666;
   text-decoration: line-through;
 }
+input[type="checkbox"] {
+  display: none;
+}
 
 input[type="checkbox"] + *::before {
   content: "";
@@ -328,7 +344,8 @@ input[type="checkbox"] + *::before {
   appearance: none;
   position: relative;
   float: right;
-  margin-right: 20px;
+  margin-right: 10px;
+  padding-top: 18px;
 }
 
 input[type="checkbox"]:checked + *::before {
@@ -336,236 +353,320 @@ input[type="checkbox"]:checked + *::before {
   color: rgb(0, 0, 0);
   text-align: center;
 }
+
 label > input[type="checkbox"]:checked + * {
   color: gray;
 }
 
+.recipe_section{
+  background-color: var(--container-color);
+}
+/* Directions */
+
+.dir_section {
+  background: var(--container-color);
+}
+
+.dirandimg {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: var(--container-color);
+  height: 500px;
+}
 .directions {
   box-sizing: border-box;
-  position: absolute;
+  text-align: center;
 
   border: 3px solid #000000;
-  margin-top: 740px;
-  left: 0;
-  margin-left: 70px;
 
-  width: 703px;
-  height: 753px;
+  width: 50%;
+  height: 100%;
 }
 
 .dire_tittle {
   box-sizing: border-box;
-  font-family:var(--title-font);
-  font-size: 23px;
-  position: absolute;
-  width: 250px;
+  font-family: var(--title-font);
+
   padding: 10px;
-  margin-left: 210px;
+  position: relative;
+  top: -22px;
+  left: 22%;
+  width: 100px;
+
   text-align: center;
-  top: -30px;
+
   background-color: var(--container-color);
   border: 3px solid #000000;
 }
 
 .directions_p {
-  padding: 40px;
-
-  margin-left: 60px;
-  
-  position: absolute;
   font-family: var(--subtitle-font);
-
-
-
 }
 
-.directions_p > li {
-  padding-top: 40px;
+.directions_p  li {
+  padding: 3px;
   color: var(--text-color);
 }
 
-.direct_imgs{
-  position:absolute;
-  right: 0;
-  width: 400px;
-  margin-top: 740px;
-  margin-right: 160px;
+.direct_imgs {
   text-align: center;
+  width: 90%;
 }
 
-.direct_imgs img{
-  padding: 20px;
+/* NF start */
+
+.nf-start {
+  width: 100%;
+  height: 60px;
+
+  background-color: var(--body-color);
+  border: 1px solid #000000;
 }
-.nf-start{
-
-position: absolute;
-margin-top: 1657px;
-width: 100%;
-height: 60px;
-
-background-color: var(--body-color);
-border: 1px solid #000000;
-
-}
-.nf-start > p{
+.nf-start > p {
   text-align: center;
-  
-  
+
   color: #171515;
   font-weight: 400;
   font-style: italic;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 60px;
-
-  margin-left: 700px;
-  
 }
 
-
-
-
-.nf-start > img{
-
-position: absolute;
-width: 20px;
-height: 20px;
-margin-top: 38px;
-
-margin-left: 840px;
-
-}
-
-.NF_section{
-  height: 800px;
-  display: flex;
-  background-color:var(--container-color) ;
-}
-.katsu_box{
-  box-sizing: border-box;
-  
-  position: relative;
-  top: 0;
+.nf-start > img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
   right: 0;
-  width: 600px;
-  height: 290px;
-  
-  margin-top: 200px;
-  margin-left: 180px;
+  margin-right: 130px;
+  margin-top: -26px;
+}
+
+/* Nutrition Facts*/
+
+.NF_section {
+  padding-top: 50px;
+  background: var(--container-color);
+}
+.nutrition {
+  padding-bottom: 50px;
+  margin-left: 60px;
+  width: 70%;
+}
+/* Katsu Card*/
+.katsu_box {
+  box-sizing: border-box;
+  display: flex;
+
+  width: 100%;
+  height: 270px;
+
   border: 2px solid var(--text-color);
 }
 
-.katsu_img{
-  width: 165px;
-  margin: 30px;
-  padding-top: 10px;
-
-}
-.katsu_tittle{
-  text-align: end;
-  margin-right: 50px;
-  margin-top: -200px;
+.katsu_img img {
+  margin: 20px;
 }
 
-.katsu_details{
-  position: absolute;
-  font-size: 15px;
-  margin-top: 20px;
-  padding-left: 170px;
-  font-size: 17px; 
+.katsu_tittle {
+  text-align: center;
+  padding-top: 12px;
 }
 
-.katsu_details > span{
-
-padding: 40px;
+.katsu_details {
+  font-size: 17px;
 }
 
-.katsu_details > p{
-  padding: 13pX;
+.katsu_details > span {
+  padding: 40px;
+}
+
+.katsu_details > p {
+  padding: 13px;
   padding-left: 40px;
 }
 
-.nutrition{
-  width: 400px;
-  margin-left: 200px;
-  position: relative;
-  top: 60px;
-  
-}
-@media only screen and (min-width: 576px) {
-  .home_container {
-    grid-template-columns: 0.7fr;
-    justify-content: center;
-    height: 100%;
+@media screen and (min-width: 537px) {
+  .katsu_img {
+    width: 400px;
+  }
+
+  .katsu_box {
+    width: 100%;
+  }
+
+  .katsu_details > span {
+    padding: 70px;
+  }
+
+  .katsu_details {
+    font-size: 22px;
   }
 }
 
-.home_img {
-  margin-top: -60px;
-  display: inline;
-  width: 100%;
-}
+/* Ipad view*/
 
-.home_tittle {
-  margin-top: -70px;
-  font-size: 50px;
-}
-
-.home_data img {
-  width: 80px;
-}
-
-
-@media only screen and (min-width: 767px) and  (max-width: 1008px){
+@media screen and (min-width: 767px) {
   nav {
     column-gap: 3rem;
   }
-  .home_container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 480pc 500px;
-    padding-block: 5rem 3rem;
-
-  }
-  .home_img {
-    display: inline;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1008px) {
-  nav {
-    margin: 10px;
+  .nav_close,
+  .nav_toggle {
+    display: none;
   }
 
-  .home_container {
-    display: grid;
-    position: relative;
-    grid-template-columns: 480px 500px;
-    padding-block: 5rem 3rem;
-    height: 730px;
+  .nav_list {
+    flex-direction: row;
+    column-gap: 3rem;
   }
 
+  .nav_menu {
+    margin-left: auto;
+    margin-right: 10px;
+  }
 
-
-  .home_data img {
-    width: 100px;
-    margin-left: 20px;
+  .home_img{
+    margin-left: 130px;
+    width: 60%;
+  }
+    .ingr_container{
+      display: flex;
+      margin: 10px;
+    }
+  .ingr_img{
+    margin-top: 40px;
+    width: 80%;
+  }
+  
+  .ingridients{
+   height: 450px;
   }
 
  
-
   
-  .home_img {
-    width: 700px;
-    position: absolute;
-    top: 11rem;
-    right: 2rem;
+  }
+  .ingr{
+    margin-top: -40px;
+    line-height: 0;
+
+  }
+  .directions{
+width: 100%;
+    height: 100%;
   }
 
-  .button {
-    margin-left: 250px;
-    padding-inline: 30px;
-    margin-top: 30px;
+  .directions_p li{
+    font-size: 15.5px;
   }
+
+
+
+  @media screen and (min-width: 1024px){
+  
+  nav {
+    height: calc((--header-height) + 1.5rem);
+  }
+  
+  .home_container {
+    position: relative;
+    grid-template-columns: 480px 500px;
+    padding-block: 7rem 3rem;
+    height: 750px;
+    margin-top: 100px;
+
+  }
+  
+  
+  .home_data {
+    text-align: initial;
+    margin-left: 180px;
+  }
+  
+  .button{
+    margin-left: 300px;
+  }
+  .home_tittle img {
+    width: 100px;
+  }
+  
+  .home_tittle div {
+    justify-content: initial;
+   
+  }
+  .home_img {
+    width: 650px;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    margin-right: 45px;
+    margin-top: 55px;
+  }
+  
+.ingridients{
+  margin-top: 150px;
+  margin-left: 120px;
+  width: 600px;
+  height: 450px;
+  
 }
-*/
+
+.ingr{
+  font-size: 6px;
+}
+
+.ingr_img{
+  width: 600px;
+  margin-top: 160px;
+  margin-left: 100px;
+}
+
+.recipe_section{
+  height: 800px;
+}
+
+
+.dirandimg{
+  width: 1200px;
+  height: 800px;
+}
+.directions{
+  height: 600px;
+  margin-left: 250px;
+  margin-top: 100px;
+}
+
+.directions_p{
+  font-size: -50vw;
+}
+.dire_tittle{
+  width: 300px;
+}
+
+.directions_p > li {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.direct_imgs{
+  width: 300px;
+  margin-left: 200px;
+  margin-top: 150px;
+  }
+
+  .nf-start img{
+    margin-right: 690px;
+  }
+
+  .NF_section{
+    display: flex;
+  }
+  .nutrition{
+    width: 500px;
+  }
+
+  .katsu_box{
+    width: 800px;
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+ }
